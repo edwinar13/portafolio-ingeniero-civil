@@ -1,0 +1,126 @@
+<aside id="aside">
+  <nav class="nav-menu">
+      <ul>
+          <li>
+              <a href="#hero">
+                  <span class="item-number">01</span>
+                  <span class="item-title">Perfil profesional</span>
+              </a>
+          </li>
+          <li>
+              <a href="#portfolio">
+                  <span class="item-number">02</span>
+                  <span class="item-title">Portafolio</span>
+              </a>
+          </li>
+          <li>
+              <a href="#contact">
+                  <span class="item-number not-number">■</span>
+                  <span class="item-title">¿Tienes algún proyecto? <br> Trabajemos juntos</span>
+              </a>
+          </li>
+          <li>
+              <a href="#experience">
+                  <span class="item-number">04</span>
+                  <span class="item-title">Experiencia</span>
+              </a>
+          </li>
+          <li>
+              <a href="#projects">
+                  <span class="item-number">05</span>
+                  <span class="item-title">Proyectos</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</aside>
+<script>
+// Aquí puedes agregar cualquier código JavaScript necesario
+</script>
+
+<style>
+/* Estilo base para el menú lateral */
+#aside {
+position: fixed;
+top: 50%; 
+right: 0;
+transform: translateY(-50%);
+z-index: 10;
+}
+
+.nav-menu ul {
+list-style-type: none;
+padding: 0;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.nav-menu li {
+margin-bottom: 10px;
+}
+
+.nav-menu a {
+text-decoration: none;
+color: #acacac;   
+display: flex;
+align-items: center;
+flex-direction: row-reverse; 
+justify-content: flex-start; 
+width: 150px; 
+margin-right: 20px; 
+position: relative;
+}
+
+.item-number {  
+font-size: 20px;    
+margin-left: 10px;
+border-bottom: 2px solid #acacac; 
+padding: 3px; 
+transition: border-color 0.3s ease;
+min-width: 30px; 
+text-align: center; 
+transition: all 0.5s ease;
+}
+
+.not-number {
+border: none; 
+}
+
+.item-title {
+font-size: 16px;
+color: transparent; 
+transition: all 0.3s ease;
+white-space: nowrap; 
+border-radius: 5px;
+padding: 8px;
+z-index: 100;
+}
+
+/* Estado de hover para el enlace completo */
+.nav-menu a:hover .item-number,
+.nav-menu a:hover .item-title {
+color: #acacac;
+background-color: rgba(116, 116, 116, 0.1);
+border-radius: 5px;
+backdrop-filter: blur(5px);
+transition: all 0.3s ease;
+}
+
+.nav-menu a:hover .item-number {
+border-color: #acacac;
+}
+
+/* Clase activa */
+.nav-menu a.active .item-number {
+color: #acacac;
+border-color: #607d8b;
+border-width: 3px;
+}
+
+@media (max-width: 768px) {
+#aside {
+  display: none;
+}
+}
+</style>

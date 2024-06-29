@@ -1,0 +1,48 @@
+{
+  "notes": [
+    {
+      "title": "MODELO 3D DE UN PROYECTO GEOTÉCNICO",      
+      "keywords": ["AutoCAD Civil 3D", "Midas GTS NX", "Modelado 3D"],
+      "date": "2024-06-01",
+      "author": "Edwin J Arevalo",
+      "image": {
+        "src": "/modelo_midas_3d.png",
+        "alt": "Modelo 3d midas GTS NX"
+      },
+      "description": "En esta nota muestro el resultado de un modelo 3D de un proyecto de geotecnia. Este tipo de modelado es esencial para visualizar el proyecto en su contexto real, identificar interferencias y evaluar impactos en el terreno..."
+    },
+    {
+      "title": "AUTOMATIZANDO MIS PERFILES GEOTÉCNICOS",
+      "keywords": ["Programación de software", "AutoCAD", "Excel"],
+      "date": "2024-06-01",
+      "author": "Edwin J Arevalo",
+      "image": {
+        "src": "/perfli_cad.svg",
+        "alt": "Perfil de un suelos en CAD"
+      },
+      "description": "En mi trabajo diario, la representación visual de un perfil de suelo, es una tarea que se realiza con frecuencia. Para optimizar este proceso, he desarrollado una aplicación en Excel que automatiza la generación de perfiles geotécnicos 2D..."
+    },
+    {
+      "title": "COMO INICIO MIS PROYECTOS DE GEOTECNIA",
+      "keywords": ["Geotecnia", "Organización de Proyectos", "Modelado 3D"],
+      "date": "2024-06-01",
+      "author": "Edwin J Arevalo",
+      "image": {
+        "src": "/localizacion_proyecto.png",
+        "alt": "Localización de un proyecto en google earth"
+      },
+      "description": "Al iniciar un proyecto geotécnico, la planificación y organización inicial son clave. Aquí explico las cinco estrategias principales que suelo utilizar para garantizar un comienzo exitoso y eficiente de cada uno de mis proyectos..."
+    },
+    {
+      "title": "GEOTECNIA 4.0: ¿EL FUTURO DE LA INGENIERÍA?",
+      "keywords": ["Geotecnia", "Tecnología", "Innovación"],
+      "date": "2024-06-01",
+      "author": "Edwin J Arevalo",
+      "image": {
+        "src": "/iot-removebg-preview.png",
+        "alt": "Ortofoto de un proyecto geotécnico"
+      },
+      "description": "La geotecnia 4.0 es una tendencia emergente en la ingeniería civil que busca integrar tecnologías digitales avanzadas en el campo de la geotecnia. En esta nota comparto mi experiencia con la implementación de tecnologías innovadoras en proyectos geotécnicos..."
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+---
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+
+const { name, label,image, location } = basics;
+const { city } = location;
+
+---
+<Section title="Perfil profesional" number="01" id="hero">
+  <div class="hero-data">
+    <figure class="hero-image">
+      <img src={image} alt={name} />
+    </figure>
+    <div class="hero-text">
+      <h5 class="ani-x1">¡Hola! Soy</h5>
+      <h1 class="ani-x1">{name}</h1>
+      <h2 class="ani-x1">Ingeniero Civil Geotecnista</h2>
+      <div class="separator-horizontal ani-x1"></div>
+      <p class="ani-x2">
+        <!-- perfil profesional --> 
+        Estudiante de Maestría en Geotecnia en la Universidad Nacional de
+        Colombia, con más de 10 años de experiencia en el sector de la
+        construcción y la geotecnia. Con amplia experiencia en interventoría 
+        y consultoría de proyectos geotécnicos, incluyendo el diseño de fundaciones,
+        obras de contención, estabilización de taludes y coordinación de proyectos.    
+      </p>
+
+      <p class="ani-x2">
+        Poseo habilidades avanzadas en  AutoCAD C3D, especialmente
+        para la proyección de obras geotécnicas, y una sólida base en
+        programación de software para la optimización de procesamiento
+        de datos geotécnicos.
+      </p>
+
+      </div>
+  </div>
+
+</Section>
+
+<style>
+  h5{
+    font-weight: 100;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-weight: 900;
+    font-size: 3.2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  
+  p{
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .separator-horizontal {
+    border-top: 5px solid #000;
+    width: 80px;
+    height: 0;
+    margin: 20px 0 35px 0;
+  }
+
+  .hero-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+
+    }  
+
+
+
+img{
+  object-fit: cover;
+  filter: grayscale(60%);
+  opacity: 0.5;
+  mask-image: linear-gradient(rgb(0, 0, 0) 97%, transparent);
+}
+figure{
+  padding: 2vw;
+}
+
+
+/**media */
+@media (max-width: 1000px) {
+  .hero-data {
+    flex-direction: column;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+.ani-x1 {
+
+  animation:  hide-data-x1 linear both;
+  animation-timeline: scroll();
+  animation-range: 0 300px;
+}
+
+
+@keyframes hide-data-x1 {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 0.8;
+      transform: translateY(200px);
+    }
+  }
+
+
+.ani-x2 {
+
+  animation:  hide-data-x2 linear both;
+  animation-timeline: scroll();
+  animation-range: 0 200px;
+}
+
+
+@keyframes hide-data-x2 {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+  }
+</style>

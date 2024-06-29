@@ -1,0 +1,148 @@
+---
+const {
+  className,
+  title,
+  keywords,
+  description,
+  note,
+  name,
+  img_src,
+  img_alt,
+} = Astro.props;
+---
+
+<div class={`slide ${className}`}>
+  <div class="content">
+    <h2>{title}</h2>
+    <!-- ejemplo
+     <h3>Programación de software <span>▲</span>
+                                AutoCAD <span>▲</span> Excel </h3>
+                            <hr>
+    donde keywords es"keywords": ["AutoCAD Civil 3D", "Midas GTS NX", "Modelado 3D"],
+    -->
+    <h3>
+      {
+        keywords.map((keyword, index) => (
+          <>
+            <span class="separator">{keyword}</span>
+            <span>{index < keywords.length - 1 ? "▲" : ""}</span>
+          </>
+        ))
+      }
+    </h3>
+
+    <p>{description}</p>
+    <!--
+      <a href={`#${note}`} class="btn">Continuar leyendo → <span>[Próximamente]</span></a>
+     -->
+    <a href="#contact" class="btn">Continuar leyendo → <span>[Próximamente]</span></a>
+  </div>
+  <img src={img_src} alt={img_alt} />
+</div>
+
+<style>
+  .slide {
+    flex: 0 0 100%;
+    position: relative;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+    padding: 20px;
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .content {
+    padding: 20px;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  .content .separator {
+    color: #c9a584;
+  }
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #b4b4b4;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .content .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #60c0b04f;
+
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+  .content .btn:hover {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #60c0b0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .content a span {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 1000px) {
+    /*
+    
+    
+    */
+    .content {
+      width: 100%;
+    }
+    img {
+      max-width: 200px;
+      height: max-content;
+      /*centrar */
+      margin: auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .slide {
+      flex-direction: column;
+      padding: 20px 0;
+    }
+    img {
+      max-width: 150px;
+      height: max-content;
+      /*centrar */
+      margin: auto;
+    }
+    .content .btn {
+      margin-top: 0;
+    }
+    .content .btn:hover {
+      background-color: transparent;
+    }
+  }
+</style>

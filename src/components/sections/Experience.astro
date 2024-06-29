@@ -1,0 +1,83 @@
+---
+import Section from "@/components/Section.astro";
+import CardWork from "@/components/CardWork.astro";
+import Globe1 from "@/iconos/Globe1.astro";
+import Globe2 from "@/iconos/Globe-2.astro";
+import Globe3 from "@/iconos/Globe-3.astro";
+import Globe4 from "@/iconos/Globe-4.astro";
+---
+
+<Section title="Experiencia" number="03" id="experience">
+  <div class="container">
+    <div class="timeline">
+      <CardWork
+        position="Ingeniero de diseño geotécnico"
+        company="Geotecnika Ingenieros Especializados S.A.S."
+        date="2023 - Actual"
+        location="Bogotá, Col"
+        description="Participé en la componente geotécnica de 6 proyectos a nivel nacional, relacionados con la construcción de muros y puentes, verificación de obras existentes y diseño de obras geotécnicas para vías y oleoductos."
+      >
+        <Globe1 slot="icon" />
+      </CardWork>
+
+      <CardWork
+        position="Ingeniero de diseño geotécnico"
+        company="Argeo Consultores Geotécnicos S.A.S"
+        date="2019 - 2023"
+        location="Bogotá, Col"
+        description="Participé en la componente geotécnica de 13 proyectos a nivel nacional, relacionados con la repotenciación de muros y puentes, estabilización de sectores críticos, diseño de zodmes, glorietas, retornos, rampas de frenado, verificación de obras existentes y diseño de obras geotécnicas para vías."
+      >
+        <Globe2 slot="icon" />
+      </CardWork>
+
+      <CardWork
+        position="Ingeniero de diseño geotécnico"
+        company="Diseños Geotecnicos S.A.S"
+        date="2017 - 2019"
+        location="Bogotá, Col"
+        description="Participé en la componente geotécnica de 23 proyectos a nivel nacional, relacionados con evaluaciones de afectación por detonación en caisson, verificaciones numéricas en modelos 2D/3D del puente Chirajara, de muros escamados, puentes y excavaciones. Diseño de cimentaciones y estabilidad de taludes para Troncales de Transmilenio, puentes peatonales, Polideportivos y realicé asesorías de obra.  Adicionalmente, realice varios prototipos mediante placas de desarrollo de software orientado la instrumentación geotécnica."
+      >
+        <Globe3 slot="icon" class="sslot" />
+      </CardWork>
+      <CardWork
+        position="Auxiliar de ingeniería"
+        company="Diseños Geotecnicos S.A.S"
+        date="2013 - 2017"
+        location="Bogotá, Col"
+        description="Realice funciones de apoyo a los ingenieros de diseño, en la elaboración de planos, procesamiento de información de campo y laboratorio, y realice la coordinación de campañas de exploración en 6 proyectos geotécnicos. Diseñé un software mediante macros en Visual Basic para el dibujo automático de perfiles de suelo en AutoCAD."
+      >
+        <Globe4 slot="icon" />
+      </CardWork>
+    </div>
+  </div>
+</Section>
+
+<style>
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw;
+  }
+
+  .timeline {
+    
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+  }
+
+  .sslot {
+    color: red;
+    transform: translateX(-50%);
+    margin: 50px;
+  }
+
+  @media (min-width: 768px) {
+    .timeline {
+      padding: 0;
+    }
+  }
+</style>
